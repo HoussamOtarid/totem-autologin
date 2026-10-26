@@ -1,0 +1,11 @@
+# Copy to /etc/systemd/system/, set User and the paths, then enable the timer:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now totem-autologin.timer
+[Unit]
+Description=Keep totem logged into Whoop
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=YOUR_USER
+ExecStart=/usr/bin/node /opt/totem-autologin/bin/totem-autologin.ts run --config /opt/totem-autologin/autologin.env

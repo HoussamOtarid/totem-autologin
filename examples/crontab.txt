@@ -1,0 +1,2 @@
+# crontab -e. Every 30 minutes, after a random 0-5 min delay. Use full paths.
+*/30 * * * * sleep $(awk 'BEGIN{srand(); print int(rand()*300)}'); /usr/local/bin/node /path/to/totem-autologin/bin/totem-autologin.ts run --config /path/to/autologin.env >> /path/to/totem-autologin.log 2>&1

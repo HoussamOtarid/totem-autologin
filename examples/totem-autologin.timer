@@ -1,0 +1,11 @@
+# Runs every 25 to 35 minutes (25 min plus a random delay, drawn again each time).
+[Unit]
+Description=Keep totem logged into Whoop, every 25-35 min
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=25min
+RandomizedDelaySec=10min
+
+[Install]
+WantedBy=timers.target
