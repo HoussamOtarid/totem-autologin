@@ -1,0 +1,6 @@
+autologin.env
+autologin-state.json
+*.bak-autologin
+*.log
+node_modules/
+.DS_Store

@@ -1,0 +1,23 @@
+{
+  "name": "totem-autologin",
+  "version": "0.1.0",
+  "description": "Keeps the totem Whoop MCP server logged into Whoop, including the emailed sign-in code",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc"
+  },
+  "license": "MIT",
+  "author": "Houssam Otarid",
+  "repository": "github:HoussamOtarid/totem-autologin",
+  "dependencies": {
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^7.0.2"
+  }
+}
